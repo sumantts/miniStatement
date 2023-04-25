@@ -7879,7 +7879,7 @@ address p {
 
 small,
 .text-small {
-  font-size: 12px; }
+  font-size: 14px; }
 
 .icon-lg {
   font-size: 2.5rem; }
@@ -9361,7 +9361,7 @@ select.form-control {
   padding: 0.4375rem 0.75rem; }
 
 .form-group label {
-  font-size: 0.875rem;
+  font-size: 0.975rem;
   line-height: 1;
   vertical-align: top; }
 
@@ -9777,7 +9777,8 @@ ul {
         line-height: 4px;
         display: inline-block;
         padding-top: 0px;
-        padding-bottom: 0px; }
+        padding-bottom: 0px;
+        font-size: 0.975rem; }
         .auth.theme-one .auto-form-wrapper .form-group .input-group .form-control:focus {
           border-right: none;
           border-color: #cfd5db; }
@@ -9790,7 +9791,7 @@ ul {
           color: #b6b6b6; }
     .auth.theme-one .auto-form-wrapper .form-group .submit-btn {
       font-family: "roboto", sans-serif;
-      font-size: 13px;
+      font-size: 16px;
       padding: 12px 8px;
       font-weight: 600; }
     .auth.theme-one .auto-form-wrapper .g-login {

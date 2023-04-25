@@ -39,33 +39,49 @@
             </div>
             
               <div class="auto-form-wrapper">
-                <h4 class="d-flex justify-content-center">Member Login</h4>
+                <h4 class="d-flex justify-content-center">Member Signup</h4>
 					  <span class="text-warning" id="error_text"></span>
                 <form action="">
                   <div class="form-group">
+                    <label class="label">Get OTP</label>
+                    <div class="input-group">
+                      <input type="tel" class="form-control" placeholder="Phone Number" aria-label="Username" aria-describedby="colored-addon3">
+                      <div class="input-group-append bg-primary border-primary">
+                        <span class="input-group-text bg-transparent">
+                          <i class="mdi mdi-send"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div class="form-group">
+                    <label class="label">Enter OTP</label>
+                    <div class="input-group">
+                      <input type="tel" class="form-control" placeholder="OTP" aria-label="Username" aria-describedby="colored-addon3">
+                      <div class="input-group-append bg-primary border-primary">
+                        <span class="input-group-text bg-transparent">
+                        <i class="mdi mdi-login"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div class="form-group">
                     <label class="label">Customer Id</label>
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Username" id="username">
-                      <div class="input-group-append">
-                        <span class="input-group-text">
-                          <i class="mdi mdi-check-circle-outline"></i>
+                      <input type="text" class="form-control" placeholder="Customer Id" aria-label="Username" aria-describedby="colored-addon3">
+                      <div class="input-group-append bg-primary border-primary">
+                        <span class="input-group-text bg-transparent">
+                        <i class="mdi mdi-checkbox-marked-circle-outline"></i>
                         </span>
                       </div>
                     </div>
                   </div>
+                  
                   <div class="form-group">
-                    <label class="label">Password</label>
-                    <div class="input-group">
-                      <input type="password" class="form-control" placeholder="*********" id="password">
-                      <div class="input-group-append">
-                        <span class="input-group-text">
-                          <i class="mdi mdi-check-circle-outline"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <button class="btn btn-primary submit-btn btn-block" id="login_btn" >Login</button>
+                    <button class="btn btn-primary submit-btn btn-block" id="login_btn" >Signup</button>
                   </div>
 
                   <div class="form-group d-flex justify-content-between">
@@ -82,7 +98,7 @@
                   </div> -->
                   <div class="text-block text-center my-3">
                     <span class="text-small font-weight-semibold">Not an Online User ?</span>
-                    <a href="?p=signup" class="text-black text-small">Signup</a>
+                    <a href="javascript: void(0)" class="text-black text-small">Signup</a>
                   </div> 
 
                 </form>
