@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?=$org_name?> | Login</title>
+    <title><?=$org_name?> | Signup</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendors/iconfonts/ionicons/dist/css/ionicons.css">
@@ -89,16 +89,16 @@
                       <label class="form-check-label">
                         <input type="checkbox" class="form-check-input" checked> Keep me signed in </label>
                     </div> -->
-                    <a href="javascript: void(0)" class="text-small forgot-password text-black">Forgot Password?</a>
-                    <a href="javascript: void(0)" class="text-small forgot-password text-black">Change Password?</a>
+                    <a href="?p=forget_password" class="text-small forgot-password text-black">Forgot Password?</a>
+                    <a href="?p=change_password" class="text-small forgot-password text-black">Change Password?</a>
                   </div>
                   <!-- <div class="form-group">
                     <button class="btn btn-block g-login">
                       <img class="mr-3" src="assets/images/file-icons/icon-google.svg" alt="">Log in with Google</button>
                   </div> -->
                   <div class="text-block text-center my-3">
-                    <span class="text-small font-weight-semibold">Not an Online User ?</span>
-                    <a href="javascript: void(0)" class="text-black text-small">Signup</a>
+                    <span class="text-small font-weight-semibold">Online User?</span>
+                    <a href="?p=login" class="text-black text-small">Login</a>
                   </div> 
 
                 </form>

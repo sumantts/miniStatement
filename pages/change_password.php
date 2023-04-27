@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?=$org_name?> | Login</title>
+    <title><?=$org_name?> | Change Password</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendors/iconfonts/ionicons/dist/css/ionicons.css">
@@ -39,9 +39,10 @@
             </div>
             
               <div class="auto-form-wrapper">
-                <h4 class="d-flex justify-content-center">Member Login</h4>
+                <h4 class="d-flex justify-content-center">Change Password</h4>
 					  <span class="text-warning" id="error_text"></span>
                 <form action="">
+
                   <div class="form-group">
                     <label class="label">Customer Id</label>
                     <div class="input-group">
@@ -53,8 +54,9 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="form-group">
-                    <label class="label">Password</label>
+                    <label class="label">Current Password</label>
                     <div class="input-group">
                       <input type="password" class="form-control" placeholder="*********" id="password">
                       <div class="input-group-append">
@@ -64,8 +66,21 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="form-group">
-                    <button class="btn btn-primary submit-btn btn-block" id="login_btn" >Login</button>
+                    <label class="label">New Password</label>
+                    <div class="input-group">
+                      <input type="password" class="form-control" placeholder="*********" id="password">
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="mdi mdi-check-circle-outline"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <button class="btn btn-primary submit-btn btn-block" id="login_btn" >Submit</button>
                   </div>
 
                   <div class="form-group d-flex justify-content-between">
@@ -81,8 +96,8 @@
                       <img class="mr-3" src="assets/images/file-icons/icon-google.svg" alt="">Log in with Google</button>
                   </div> -->
                   <div class="text-block text-center my-3">
-                    <span class="text-small font-weight-semibold">Not an Online User?</span>
-                    <a href="?p=signup" class="text-black text-small">Signup</a>
+                    <span class="text-small font-weight-semibold">Online User?</span>
+                    <a href="?p=login" class="text-black text-small">Login</a>
                   </div> 
 
                 </form>

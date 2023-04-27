@@ -9,7 +9,7 @@
                   <div class="dot-indicator bg-success"></div>
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name"><?=$_SESSION["Staff_Name"]?></p>
+                  <p class="profile-name"> Customer Name</p>
                   <!--<p class="designation">Premium user</p>-->
                 </div>
               </a>
@@ -18,32 +18,28 @@
             <li class="nav-item">
               <a class="nav-link" href="?p=dashboard">
                 <i class="menu-icon typcn typcn-document-text"></i>
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Account statement</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>
-                <span class="menu-title">Deposit</span>
+                <span class="menu-title">User Page</span>
                 <i class="menu-arrow"></i>
               </a>
-              <div <?php if($p == 'receipt' || $p == 'payment'){?>class="collapse show"<?php }else{?>class="collapse"<?php } ?> id="ui-basic">
+              <div <?php if($p == 'change_password'){?>class="collapse show"<?php }else{?>class="collapse"<?php } ?> id="ui-basic">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="?p=receipt">Receipt</a>
+                    <a class="nav-link" href="?p=change_password">Change Password</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="?p=payment">Payment</a>
+                    <a class="nav-link" href="?p=login&out=ok">Log Out</a>
                   </li>
                 </ul>
               </div>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="?p=loan_collection">
-                <i class="menu-icon typcn typcn-shopping-bag"></i>
-                <span class="menu-title">Loan Collection</span>
-              </a>
-            </li> -->
+            <!--
+            
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>
@@ -79,5 +75,6 @@
                 <span class="menu-title">Sign Out</span>
               </a>
             </li>
+            --->
           </ul>
         </nav>
