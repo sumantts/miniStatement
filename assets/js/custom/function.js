@@ -70,6 +70,7 @@
 
 	//Signup Page Function
 	$( "#signUpBtn" ).on( "click", function() {
+		$accountNumber = $('#accountNumber').val();
 		$phoneNumber = $('#phoneNumber').val();
 		$signUpOTP = $('#signUpOTP').val();
 		$signCreatePassword = $('#signCreatePassword').val();
@@ -79,9 +80,30 @@
 		if($phoneNumber == ''){
 			$('#error_text').html('Please enter Phone Number');
 		}else if($signUpOTP == ''){
-			$( "#signUpBtn" ).html('Validate OTP');
-			$('#block2').show();
-			$('#error_text').html('OTP sent to you mobile, Please enter OTP');
+			if($phoneNumber != ''){
+				$.ajax({
+				method: "POST",
+				url: "assets/php/function.php",
+				data: { fn: "getCustomerName", accountNumber: $accountNumber, phoneNumber: $phoneNumber }
+				})
+				.done(function( res ) {
+					console.log(res);
+					$res1 = JSON.parse(res);
+					if($res1.status == true){
+						$('#cusNameSpan').html($res1.Member_Name);
+						$('#cusIdSpan').html($res1.Member_Code);
+						$Member_ID = $res1.Member_ID;
+						$Member_Code = $res1.Member_Code;
+
+						$( "#signUpBtn" ).html('Validate OTP');
+						$('#block2').show();
+						$('#error_text').html('OTP sent to you mobile, Please enter OTP');
+					}else{
+						//alert($res1.message);
+						$('#error_text').html($res1.message);
+					}
+				});
+			}
 		}else if($signCreatePassword == ''){
 			$( "#signUpBtn" ).html('Submit');
 			$('#block3').show();
@@ -90,19 +112,23 @@
 			$.ajax({
 			method: "POST",
 			url: "assets/php/function.php",
-			data: { fn: "signUpBtn", phoneNumber: $phoneNumber, signUpOTP: $signUpOTP, signCreatePassword: $signCreatePassword }
+			data: { fn: "signUpBtn", Member_ID: $Member_ID, Member_Code: $Member_Code, signCreatePassword: $signCreatePassword }
 			})
 			.done(function( res ) {
 				console.log(res);
 				$res1 = JSON.parse(res);
 				if($res1.status == true){
-					
+					$('#error_text').html('Registration completed successfully');					
+					$('#accountNumber').val('');
+					$('#phoneNumber').val('');
+					$('#signUpOTP').val('');
+					$('#signCreatePassword').val('');
 				}else{
 					//alert($res1.message);
 					$('#error_text').html($res1.message);
 				}
 			});
-			return false;
+			//return false;
 		}
 	});
 

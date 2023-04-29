@@ -1,5 +1,5 @@
 <?php 
-//if(!$_SESSION["User_Id"]){header('location:?p=login');}
+if(!$_SESSION["MemId"]){header('location:?p=login');}
 include('common/header.php');
 /*****
 	$Adm = $_SESSION["Adm"];

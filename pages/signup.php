@@ -42,13 +42,25 @@
                 <h4 class="d-flex justify-content-center">Member Signup</h4>
 					  <span class="text-warning" id="error_text"></span>
                 
+                <div class="form-group">
+                  <label class="label">Customer Id</label>
+                  <div class="input-group">
+                    <input type="tel" id="accountNumber" class="form-control" placeholder="Customer Id">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="mdi mdi-check-circle-outline"></i>
+                        </span>
+                      </div>
+                  </div>
+                </div>
+                
                   <div class="form-group">
-                    <label class="label">Phone Number</label>
+                    <label class="label">Phone Number*</label>
                     <div class="input-group">
-                      <input type="tel" id="phoneNumber" class="form-control" placeholder="Phone Number"  aria-describedby="colored-addon3">
-                      <div class="input-group-append bg-primary border-primary">
-                        <span class="input-group-text bg-transparent">
-                          <i class="mdi mdi-send"></i>
+                      <input type="tel" id="phoneNumber" class="form-control" placeholder="Phone Number" >
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="mdi mdi-check-circle-outline"></i>
                         </span>
                       </div>
                     </div>
@@ -56,12 +68,12 @@
 
                   
                   <div class="form-group" id="block2" style="display: none;">
-                    <label class="label">Enter OTP</label>
+                    <label class="label">Enter OTP*</label>
                     <div class="input-group">
-                      <input type="tel" id="signUpOTP" class="form-control" placeholder="OTP" aria-describedby="colored-addon3">
-                      <div class="input-group-append bg-primary border-primary">
-                        <span class="input-group-text bg-transparent">
-                        <i class="mdi mdi-login"></i>
+                      <input type="tel" id="signUpOTP" class="form-control" placeholder="OTP" >
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="mdi mdi-check-circle-outline"></i>
                         </span>
                       </div>
                     </div>
@@ -69,15 +81,15 @@
 
                   
                   <div class="form-group" id="block3" style="display: none;">
-                    <label class="label" style="color: #ffaf00;">Member Name: Suman Jana</label></br>
+                    <label class="label" style="color: #ffaf00;">Member Name: <span id="cusNameSpan"></span></label></br>
 
-                    <label class="label" style="color: #ffaf00;">Customer Id: 0000123456</label>
+                    <label class="label" style="color: #ffaf00;">Customer Id:  <span id="cusIdSpan"></span></label>
                     
                     <div class="input-group">
-                      <input type="tel" id="signCreatePassword" class="form-control" placeholder="Create Password" aria-describedby="colored-addon3">
-                      <div class="input-group-append bg-primary border-primary">
-                        <span class="input-group-text bg-transparent">
-                        <i class="mdi mdi-checkbox-marked-circle-outline"></i>
+                      <input type="tel" id="signCreatePassword" class="form-control" placeholder="Create Password">
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="mdi mdi-check-circle-outline"></i>
                         </span>
                       </div>
                     </div>
@@ -100,7 +112,7 @@
                       <img class="mr-3" src="assets/images/file-icons/icon-google.svg" alt="">Log in with Google</button>
                   </div> -->
                   <div class="text-block text-center my-3">
-                    <span class="text-small font-weight-semibold">Online User?</span>
+                    <span class="text-small font-weight-semibold">Already User?</span>
                     <a href="?p=login" class="text-black text-small" style="color: #ffaf00;">Login</a>
                   </div> 
 
