@@ -91,8 +91,8 @@ include('common/header.php');
                             <label class="col-sm-4 col-form-label text-danger">From date*</label>
                             <div class="col-sm-8">
                               <input type="date" id="from_date" class="form-control" />
-                              <span class="col-form-label  text-danger" id="account_number_error" style="font-size: 12px;"></span>
-                              <span class="col-form-label  text-success" id="account_number_success" style="font-size: 12px;"></span>
+                              <span class="col-form-label  text-danger" id="from_date_error" style="font-size: 12px;"></span>
+                              <span class="col-form-label  text-success" id="from_date_success" style="font-size: 12px;"></span>
                             </div>
                           </div>
                         </div>
@@ -110,13 +110,13 @@ include('common/header.php');
 
                         <div class="col-md-4">
                           <div class="form-group row">
-                          <button type="button" id="check_account_number" class="btn btn-inverse-success btn-fw">Generate</button>
+                          <button type="button" id="generateAcStatement" class="btn btn-inverse-success btn-fw">Generate</button>
                           </div>
                         </div>
                       </div>
 					</form>
 
-					<div class="table-responsive">
+					<div class="table-responsive" id="block2" style="display: none;">
 						<table class="table table-bordered">
 						<thead>
 							<tr>

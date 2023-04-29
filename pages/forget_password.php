@@ -41,11 +41,11 @@
               <div class="auto-form-wrapper">
                 <h4 class="d-flex justify-content-center">Forget Password</h4>
 					  <span class="text-warning" id="error_text"></span>
-                <form action="">
-                  <div class="form-group">
+            
+                  <div class="form-group" id="block1">
                     <label class="label">Customer Id</label>
                     <div class="input-group">
-                      <input type="tel" class="form-control" placeholder="Customer Id" aria-label="Username" aria-describedby="colored-addon3">
+                      <input type="tel" id="customerId" class="form-control" placeholder="Customer Id" aria-describedby="colored-addon3">
                       <div class="input-group-append bg-primary border-primary">
                         <span class="input-group-text bg-transparent">
                           <i class="mdi mdi-send"></i>
@@ -55,10 +55,10 @@
                   </div>
 
                   
-                  <div class="form-group">
+                  <div class="form-group" id="block2" style="display: none;">
                     <label class="label">Enter OTP</label>
                     <div class="input-group">
-                      <input type="tel" class="form-control" placeholder="OTP" aria-label="Username" aria-describedby="colored-addon3">
+                      <input type="tel" id="fogetPwdOTP" class="form-control" placeholder="OTP" aria-describedby="colored-addon3">
                       <div class="input-group-append bg-primary border-primary">
                         <span class="input-group-text bg-transparent">
                         <i class="mdi mdi-login"></i>
@@ -68,10 +68,10 @@
                   </div>
 
                   
-                  <div class="form-group">
+                  <div class="form-group" id="block3" style="display: none;">
                     <label class="label">Generate Password</label>
                     <div class="input-group">
-                      <input type="password" class="form-control" placeholder="******" aria-label="Username" aria-describedby="colored-addon3">
+                      <input type="text" id="generatePwd" class="form-control" placeholder="******" aria-describedby="colored-addon3">
                       <div class="input-group-append bg-primary border-primary">
                         <span class="input-group-text bg-transparent">
                         <i class="mdi mdi-checkbox-marked-circle-outline"></i>
@@ -81,7 +81,7 @@
                   </div>
                   
                   <div class="form-group">
-                    <button class="btn btn-primary submit-btn btn-block" id="login_btn" >Submit</button>
+                    <button class="btn btn-primary submit-btn btn-block" id="forgetPasswordBtn" >Get OTP</button>
                   </div>
 
                   <div class="form-group d-flex justify-content-between">
@@ -100,8 +100,7 @@
                     <span class="text-small font-weight-semibold">Online User?</span>
                     <a href="?p=login" class="text-black text-small">Login</a>
                   </div> 
-
-                </form>
+                  
               </div>
               <!--<ul class="auth-footer">
                 <li>
@@ -136,5 +135,6 @@
 	<script src="assets/js/shared/jquery.cookie.js" type="text/javascript"></script>
 	
 	<script type="text/javascript" src="assets/js/custom/function.js"></script>
+  <div class="modal"><!-- Place at bottom of page Loading.. --></div>
   </body>
 </html>

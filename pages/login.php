@@ -41,7 +41,7 @@
               <div class="auto-form-wrapper">
                 <h4 class="d-flex justify-content-center">Member Login</h4>
 					  <span class="text-warning" id="error_text"></span>
-                <form action="">
+                
                   <div class="form-group">
                     <label class="label">Customer Id</label>
                     <div class="input-group">
@@ -85,7 +85,7 @@
                     <a href="?p=signup" class="text-black text-small">Signup</a>
                   </div> 
 
-                </form>
+                
               </div>
               <!--<ul class="auth-footer">
                 <li>
@@ -120,5 +120,6 @@
 	<script src="assets/js/shared/jquery.cookie.js" type="text/javascript"></script>
 	
 	<script type="text/javascript" src="assets/js/custom/function.js"></script>
+  <div class="modal"><!-- Place at bottom of page Loading.. --></div>
   </body>
 </html>

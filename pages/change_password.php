@@ -41,12 +41,11 @@
               <div class="auto-form-wrapper">
                 <h4 class="d-flex justify-content-center">Change Password</h4>
 					  <span class="text-warning" id="error_text"></span>
-                <form action="">
 
                   <div class="form-group">
                     <label class="label">Customer Id</label>
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Username" id="username">
+                      <input type="tel" class="form-control" placeholder="Customer Id" id="cpCustomerId">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -58,7 +57,7 @@
                   <div class="form-group">
                     <label class="label">Current Password</label>
                     <div class="input-group">
-                      <input type="password" class="form-control" placeholder="*********" id="password">
+                      <input type="password" class="form-control" placeholder="*********" id="cpCurrentPassword">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -70,7 +69,7 @@
                   <div class="form-group">
                     <label class="label">New Password</label>
                     <div class="input-group">
-                      <input type="password" class="form-control" placeholder="*********" id="password">
+                      <input type="password" class="form-control" placeholder="*********" id="cpNewPassword">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -80,7 +79,7 @@
                   </div>
 
                   <div class="form-group">
-                    <button class="btn btn-primary submit-btn btn-block" id="login_btn" >Submit</button>
+                    <button class="btn btn-primary submit-btn btn-block" id="ChangePasswordBtn" >Submit</button>
                   </div>
 
                   <div class="form-group d-flex justify-content-between">
@@ -99,8 +98,6 @@
                     <span class="text-small font-weight-semibold">Online User?</span>
                     <a href="?p=login" class="text-black text-small">Login</a>
                   </div> 
-
-                </form>
               </div>
               <!--<ul class="auth-footer">
                 <li>
@@ -135,5 +132,6 @@
 	<script src="assets/js/shared/jquery.cookie.js" type="text/javascript"></script>
 	
 	<script type="text/javascript" src="assets/js/custom/function.js"></script>
+  <div class="modal"><!-- Place at bottom of page Loading.. --></div>
   </body>
 </html>
