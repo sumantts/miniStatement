@@ -72,7 +72,7 @@
 	$( "#signUpBtn" ).on( "click", function() {
 		$phoneNumber = $('#phoneNumber').val();
 		$signUpOTP = $('#signUpOTP').val();
-		$signUpCustomerId = $('#signUpCustomerId').val();
+		$signCreatePassword = $('#signCreatePassword').val();
 
 		$('#error_text').html('');
 
@@ -82,15 +82,15 @@
 			$( "#signUpBtn" ).html('Validate OTP');
 			$('#block2').show();
 			$('#error_text').html('OTP sent to you mobile, Please enter OTP');
-		}else if($signUpCustomerId == ''){
+		}else if($signCreatePassword == ''){
 			$( "#signUpBtn" ).html('Submit');
 			$('#block3').show();
-			$('#error_text').html('Please enter your Customer Id');
+			$('#error_text').html('Please create password');
 		}else{
 			$.ajax({
 			method: "POST",
 			url: "assets/php/function.php",
-			data: { fn: "signUpBtn", phoneNumber: $phoneNumber, signUpOTP: $signUpOTP, signUpCustomerId: $signUpCustomerId }
+			data: { fn: "signUpBtn", phoneNumber: $phoneNumber, signUpOTP: $signUpOTP, signCreatePassword: $signCreatePassword }
 			})
 			.done(function( res ) {
 				console.log(res);

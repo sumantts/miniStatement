@@ -116,14 +116,14 @@ include('common/header.php');
                       </div>
 					</form>
 
-					<div class="table-responsive" id="block2" style="display: none;">
+					<div class="table-responsive" id="block2" style="display: block;">
 						<table class="table table-bordered">
 						<thead>
 							<tr>
-							<td >A/c No.</td>
-							<td >Product Name</td>
-							<td >Balance Amount</td>
-							<td >Show Statement</td>
+							<td ><strong>A/c No.</strong></td>
+							<td ><strong>Product Name</strong></td>
+							<td ><strong>Balance Amount</strong></td>
+							<td ><strong>Show Statement</strong></td>
 							</tr>
 						</thead>
 						<tbody>
@@ -134,19 +134,20 @@ include('common/header.php');
 								<td>0.00</td>
 								<td style="text-align: right;">0.00</td>
 								<td style="text-align: right;">0.00</td>
-								<td style="text-align: right;">&nbsp;</td>
+								<td style="text-align: center;"> <a href="?p=statement_view">
+									<button type="button" class="btn btn-primary btn-fw">More</button></a> </td>
 							</tr>
 							<tr>
 								<td>0.00</td>
 								<td style="text-align: right;">0.00</td>
 								<td style="text-align: right;">0.00</td>
-								<td style="text-align: right;">&nbsp;</td>
+								<td style="text-align: center;"> <a href="?p=statement_view"><button type="button" class="btn btn-primary btn-fw">More</button></a> </td>
 							</tr>
 							<tr>
 							<td>0.00</td>
 							<td style="text-align: right;">0.00</td>
 							<td style="text-align: right;">0.00</td>
-							<td style="text-align: right;">&nbsp;</td>
+								<td style="text-align: center;"> <a href="?p=statement_view"><button type="button" class="btn btn-primary btn-fw">More</button></a> </td>
 							</tr>
 
 							<tr>
@@ -156,19 +157,19 @@ include('common/header.php');
 								<td>0.00</td>
 								<td style="text-align: right;">0.00</td>
 								<td style="text-align: right;">0.00</td>
-								<td style="text-align: right;">&nbsp;</td>
+								<td style="text-align: center;"> <a href="?p=statement_view"><button type="button" class="btn btn-primary btn-fw">More</button></a> </td>
 							</tr>
 							<tr>
 								<td>0.00</td>
 								<td style="text-align: right;">0.00</td>
 								<td style="text-align: right;">0.00</td>
-								<td style="text-align: right;">&nbsp;</td>
+								<td style="text-align: center;"> <a href="?p=statement_view"><button type="button" class="btn btn-primary btn-fw">More</button></a> </td>
 							</tr>
 							<tr>
 							<td>0.00</td>
 							<td style="text-align: right;">0.00</td>
 							<td style="text-align: right;">0.00</td>
-							<td style="text-align: right;">&nbsp;</td>
+								<td style="text-align: center;"> <a href="?p=statement_view"><button type="button" class="btn btn-primary btn-fw">More</button></a> </td>
 							</tr>
 							
 						</tbody>

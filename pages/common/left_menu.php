@@ -28,10 +28,9 @@
                 <i class="menu-arrow"></i>
               </a>
               <div <?php if($p == 'change_password'){?>class="collapse show"<?php }else{?>class="collapse"<?php } ?> id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="?p=change_password">Change Password</a>
-                  </li>
+                <ul class="nav flex-column sub-menu">                
+                  
+                  
                   <li class="nav-item">
                     <a class="nav-link" href="?p=login&out=ok">Log Out</a>
                   </li>

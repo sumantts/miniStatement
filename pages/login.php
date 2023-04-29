@@ -73,8 +73,8 @@
                       <label class="form-check-label">
                         <input type="checkbox" class="form-check-input" checked> Keep me signed in </label>
                     </div> -->
-                    <a href="?p=forget_password" class="text-small forgot-password text-black">Forgot Password?</a>
-                    <a href="?p=change_password" class="text-small forgot-password text-black">Change Password?</a>
+                    <a href="?p=forget_password" class="text-small forgot-password text-black" style="color: #ffaf00;">Forgot Password?</a>
+                    <a href="?p=change_password" class="text-small forgot-password text-black" style="color: #ffaf00;">Change Password?</a>
                   </div>
                   <!-- <div class="form-group">
                     <button class="btn btn-block g-login">
@@ -82,7 +82,7 @@
                   </div> -->
                   <div class="text-block text-center my-3">
                     <span class="text-small font-weight-semibold">Not an Online User?</span>
-                    <a href="?p=signup" class="text-black text-small">Signup</a>
+                    <a href="?p=signup" class="text-black text-small" style="color: #ffaf00;">Signup</a>
                   </div> 
 
                 

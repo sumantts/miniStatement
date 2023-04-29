@@ -24,6 +24,7 @@
 			die( print_r( sqlsrv_errors(), true));
 		}else{
 			$rows = sqlsrv_fetch_array($stmt);
+			echo json_encode($rows);
 			if(sizeof($rows) > 0){
 				$status = true;
 				$_SESSION["User_Id"] = $rows["User_Id"];

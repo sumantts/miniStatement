@@ -87,8 +87,8 @@
                       <label class="form-check-label">
                         <input type="checkbox" class="form-check-input" checked> Keep me signed in </label>
                     </div> -->
-                    <a href="?p=forget_password" class="text-small forgot-password text-black">Forgot Password?</a>
-                    <a href="?p=change_password" class="text-small forgot-password text-black">Change Password?</a>
+                    <!-- <a href="?p=forget_password" class="text-small forgot-password text-black">Forgot Password?</a>
+                    <a href="?p=change_password" class="text-small forgot-password text-black">Change Password?</a> -->
                   </div>
                   <!-- <div class="form-group">
                     <button class="btn btn-block g-login">

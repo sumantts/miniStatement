@@ -87,11 +87,11 @@ include('common/header.php');
 						<table class="table table-bordered">
 						<thead>
 							<tr>
-							<td >Date</td>
-							<td >Particulars</td>
-							<td >Dr.</td>
-							<td >Cr.</td>
-							<td>Balance</td>
+							<td ><strong>Date</strong></td>
+							<td ><strong>Particulars</strong></td>
+							<td ><strong>Dr.</strong></td>
+							<td ><strong>Cr.</strong></td>
+							<td><strong>Balance</strong></td>
 							</tr>
 						</thead>
 						<tbody>

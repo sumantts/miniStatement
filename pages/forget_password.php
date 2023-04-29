@@ -71,7 +71,7 @@
                   <div class="form-group" id="block3" style="display: none;">
                     <label class="label">Generate Password</label>
                     <div class="input-group">
-                      <input type="text" id="generatePwd" class="form-control" placeholder="******" aria-describedby="colored-addon3">
+                      <input type="password" id="generatePwd" class="form-control" placeholder="******" aria-describedby="colored-addon3">
                       <div class="input-group-append bg-primary border-primary">
                         <span class="input-group-text bg-transparent">
                         <i class="mdi mdi-checkbox-marked-circle-outline"></i>
@@ -89,8 +89,8 @@
                       <label class="form-check-label">
                         <input type="checkbox" class="form-check-input" checked> Keep me signed in </label>
                     </div> -->
-                    <a href="?p=forget_password" class="text-small forgot-password text-black">Forgot Password?</a>
-                    <a href="?p=change_password" class="text-small forgot-password text-black">Change Password?</a>
+                    <!-- <a href="?p=forget_password" class="text-small forgot-password text-black" style="color: #ffaf00;">Forgot Password?</a>
+                    <a href="?p=change_password" class="text-small forgot-password text-black" style="color: #ffaf00;">Change Password?</a> -->
                   </div>
                   <!-- <div class="form-group">
                     <button class="btn btn-block g-login">
@@ -98,7 +98,7 @@
                   </div> -->
                   <div class="text-block text-center my-3">
                     <span class="text-small font-weight-semibold">Online User?</span>
-                    <a href="?p=login" class="text-black text-small">Login</a>
+                    <a href="?p=login" class="text-black text-small" style="color: #ffaf00;">Login</a>
                   </div> 
                   
               </div>
