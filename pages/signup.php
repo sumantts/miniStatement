@@ -40,12 +40,12 @@
             
               <div class="auto-form-wrapper">
                 <h4 class="d-flex justify-content-center">Member Signup</h4>
-					  <span class="text-warning" id="error_text"></span>
+					  <span class="text-warning d-flex justify-content-center" id="error_text"></span>
                 
                 <div class="form-group">
                   <label class="label">Customer Id</label>
                   <div class="input-group">
-                    <input type="tel" id="accountNumber" class="form-control" placeholder="Customer Id">
+                    <input type="tel" id="accountNumber" class="form-control" >
                     <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -57,7 +57,7 @@
                   <div class="form-group">
                     <label class="label">Phone Number*</label>
                     <div class="input-group">
-                      <input type="tel" id="phoneNumber" class="form-control" placeholder="Phone Number" >
+                      <input type="tel" id="phoneNumber" class="form-control" >
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -70,7 +70,7 @@
                   <div class="form-group" id="block2" style="display: none;">
                     <label class="label">Enter OTP*</label>
                     <div class="input-group">
-                      <input type="tel" id="signUpOTP" class="form-control" placeholder="OTP" >
+                      <input type="tel" id="signUpOTP" class="form-control" >
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>
@@ -83,10 +83,12 @@
                   <div class="form-group" id="block3" style="display: none;">
                     <label class="label" style="color: #ffaf00;">Member Name: <span id="cusNameSpan"></span></label></br>
 
-                    <label class="label" style="color: #ffaf00;">Customer Id:  <span id="cusIdSpan"></span></label>
+                    <label class="label" style="color: #ffaf00;">Customer Id:  <span id="cusIdSpan"></span></label></br>
+
+                    <label class="label">Create Password*</label>
                     
                     <div class="input-group">
-                      <input type="tel" id="signCreatePassword" class="form-control" placeholder="Create Password">
+                      <input type="password" id="signCreatePassword" class="form-control" >
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-check-circle-outline"></i>

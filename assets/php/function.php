@@ -45,15 +45,51 @@
 	
 	
 	//forget Password function
+	if($fn == 'forgetPasswordOTP'){
+		$return_result = array();
+		$customerId = $_POST["customerId"];
+		$status = true;
+	
+		$return_result['status'] = $status;
+		$return_result['otp'] = rand(111111, 999999);
+
+		$sql = "{call dbo.USP_NBCheckCustomer_ById(?)}";
+
+		$params = array($customerId); 
+
+		if ($stmt = sqlsrv_prepare($conn, $sql, $params)) {
+			//echo "Statement prepared.<br><br>\n"; 
+		} else {  
+			//echo "Statement could not be prepared.\n";  
+			die(print_r(sqlsrv_errors(), true));  
+		} 
+
+		if( sqlsrv_execute( $stmt ) === false ) {
+			die( print_r( sqlsrv_errors(), true));
+		}else{
+			//do success step
+			$rows = sqlsrv_fetch_array($stmt);
+			if(sizeof($rows) > 0){
+				$status = true;
+				//$_SESSION["User_Id"] = $rows["User_Id"];
+			}else{
+				$status = false;
+				$return_result['message'] = 'Customer Id not match';		
+			}//end if
+		}//end if
+		
+		echo json_encode($return_result);
+	}//end function doLogin
+
 	if($fn == 'forgetPasswordBtn'){
 		$return_result = array();
 		$customerId = $_POST["customerId"];
 		$fogetPwdOTP = $_POST["fogetPwdOTP"];
 		$fogetPwdPassword = $_POST["fogetPwdPassword"];
 
-		$sql = "{call dbo.USP_NBCustValidate(?,?)}";
+		$sql = "{call dbo.USP_NBCustPwdForget(?,?)}";
 
-		$params = array($param1, $param2); 
+		$params = array($customerId, $fogetPwdPassword); 
 
 		if ($stmt = sqlsrv_prepare($conn, $sql, $params)) {
 			//echo "Statement prepared.<br><br>\n"; 
@@ -68,14 +104,10 @@
 			$rows = sqlsrv_fetch_array($stmt);
 			if(sizeof($rows) > 0){
 				$status = true;
-				$_SESSION["User_Id"] = $rows["User_Id"];
-				$_SESSION["Staff_Id"] = $rows["Staff_Id"];
-				$_SESSION["Staff_Name"] = $rows["Staff_Name"];
-				$_SESSION["Adm"] = $rows["Adm"];
-				$return_result['User_Id'] = $rows["User_Id"];
+				//$_SESSION["User_Id"] = $rows["User_Id"];
 			}else{
 				$status = false;
-				$return_result['message'] = 'Wrong Username or Password';		
+				$return_result['message'] = 'Password not update';		
 			}
 
 		}
@@ -119,6 +151,7 @@
 					$return_result["Member_ID"] = $rows["Member_ID"];
 					$return_result["Member_Name"] = $rows["Member_Name"];
 					$return_result["Member_Code"] = $rows["Member_Code"];	
+					$return_result['signUpOTP'] = rand(111111, 999999);
 				}	
 			}else{
 				$status = false;
@@ -127,7 +160,7 @@
 
 		}
 		$return_result['status'] = $status;
-		
+
 		echo json_encode($return_result);
 	}//end function signup
 
@@ -178,9 +211,9 @@
 		$cpCurrentPassword = $_POST["cpCurrentPassword"];
 		$cpNewPassword = $_POST["cpNewPassword"];
 
-		$sql = "{call dbo.USP_NBCustValidate(?,?)}";
+		$sql = "{call dbo.USP_NBCustPwdChng(?,?)}";
 
-		$params = array($param1, $param2); 
+		$params = array($cpCustomerId, $cpCurrentPassword, $cpNewPassword); 
 
 		if ($stmt = sqlsrv_prepare($conn, $sql, $params)) {
 			//echo "Statement prepared.<br><br>\n"; 
@@ -195,14 +228,10 @@
 			$rows = sqlsrv_fetch_array($stmt);
 			if(sizeof($rows) > 0){
 				$status = true;
-				$_SESSION["User_Id"] = $rows["User_Id"];
-				$_SESSION["Staff_Id"] = $rows["Staff_Id"];
-				$_SESSION["Staff_Name"] = $rows["Staff_Name"];
-				$_SESSION["Adm"] = $rows["Adm"];
-				$return_result['User_Id'] = $rows["User_Id"];
+				//$_SESSION["User_Id"] = $rows["User_Id"];
 			}else{
 				$status = false;
-				$return_result['message'] = 'Wrong Username or Password';		
+				$return_result['message'] = 'Customer Id/Old password doesnot match';		
 			}
 
 		}

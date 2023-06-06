@@ -71,7 +71,7 @@
                   <div class="form-group" id="block3" style="display: none;">
                     <label class="label">Generate Password</label>
                     <div class="input-group">
-                      <input type="password" id="generatePwd" class="form-control" placeholder="******" aria-describedby="colored-addon3">
+                      <input type="text" id="generatePwd" class="form-control" placeholder="******" aria-describedby="colored-addon3">
                       <div class="input-group-append bg-primary border-primary">
                         <span class="input-group-text bg-transparent">
                         <i class="mdi mdi-checkbox-marked-circle-outline"></i>

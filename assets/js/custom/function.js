@@ -40,14 +40,42 @@
 		$('#error_text').html('');
 		if($customerId == ''){
 			$('#error_text').html('Please enter Customer Id');
+
 		}else if($fogetPwdOTP == ''){
+			if($customerId != ''){
+				//call a service to send OTP
+				$.ajax({
+				method: "POST",
+				url: "assets/php/function.php",
+				data: { fn: "forgetPasswordOTP", customerId: $customerId }
+				})
+				.done(function( res ) {
+					console.log(res);
+					$res1 = JSON.parse(res);
+					if($res1.status == true){
+						$('#error_text').html('OTP sent to you mobile, Please enter OTP');
+						$current_otp = $res1.otp;					
+					}else{
+						//alert($res1.message);
+						$('#error_text').html($res1.message);
+					}
+				});
+			}//end if
+
 			$( "#forgetPasswordBtn" ).html('Validate OTP');
 			$('#block2').show();
 			$('#error_text').html('OTP sent to you mobile, Please enter OTP');
 		}else if($generatePwd == ''){
-			$( "#forgetPasswordBtn" ).html('Submit');
-			$('#block3').show();
-			$('#error_text').html('Please enter your password');
+			if($fogetPwdOTP != ''){
+				console.log($current_otp+' == '+$fogetPwdOTP);
+				if($current_otp == $fogetPwdOTP){
+					$( "#forgetPasswordBtn" ).html('Submit');
+					$('#block3').show();
+					$('#error_text').html('Please enter your password');
+				}else{
+					$('#error_text').html('Incorrect OTP');					
+				}
+			}
 		}else{
 			$.ajax({
 			method: "POST",
@@ -79,6 +107,7 @@
 
 		if($phoneNumber == ''){
 			$('#error_text').html('Please enter Phone Number');
+			
 		}else if($signUpOTP == ''){
 			if($phoneNumber != ''){
 				$.ajax({
@@ -94,6 +123,8 @@
 						$('#cusIdSpan').html($res1.Member_Code);
 						$Member_ID = $res1.Member_ID;
 						$Member_Code = $res1.Member_Code;
+						$tempSignUpOTP = $res1.signUpOTP;
+						$('#signUpOTP').val($tempSignUpOTP);
 
 						$( "#signUpBtn" ).html('Validate OTP');
 						$('#block2').show();
@@ -104,11 +135,15 @@
 					}
 				});
 			}
+		}else if(($signUpOTP == '') || ($signUpOTP != $tempSignUpOTP)){
+			$('#error_text').html('Please enter the correct OTP');
 		}else if($signCreatePassword == ''){
 			$( "#signUpBtn" ).html('Submit');
+			$('#block2').hide();
 			$('#block3').show();
 			$('#error_text').html('Please create password');
 		}else{
+			console.log('call registration fun....');
 			$.ajax({
 			method: "POST",
 			url: "assets/php/function.php",
@@ -123,6 +158,11 @@
 					$('#phoneNumber').val('');
 					$('#signUpOTP').val('');
 					$('#signCreatePassword').val('');
+					
+					$('#cusNameSpan').html('');
+					$('#cusIdSpan').html('');
+					$('#block3').hide();
+					$( "#signUpBtn" ).html('Get OTP');
 				}else{
 					//alert($res1.message);
 					$('#error_text').html($res1.message);
